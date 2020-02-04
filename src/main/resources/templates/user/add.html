@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Your Spa Services</title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<form method="post" action="/user/index">
+    <div th:if="${error}">
+        <h6>Passwords do not match. Please Try again</h6>
+    </div>
+    <div>
+    <input type="text" name="username" placeholder="Username" th:value="${user}">
+    <br>
+    <input type="email" name="email" placeholder="Email" th:value="${emailSave}">
+    <br>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+    <input type="password" name="verify" placeholder="Verify Password">
+    <br>
+    <input type="submit" value="Submit" style="margin-top:.5rem">
+    </div>
+</form>
+</body>
+</html>
