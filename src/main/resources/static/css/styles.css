@@ -24,3 +24,15 @@ table {
             padding: 10px;
             text-align: center;
 }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    padding-top:0;
+}
+
+.nailPolish{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}

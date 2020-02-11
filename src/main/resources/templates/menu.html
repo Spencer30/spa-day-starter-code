@@ -27,10 +27,24 @@
         <h3 th:text="Manicure"> </h3>
         <p th:replace="fragments :: manicureDescription"></p>
     </th:block>
-    <th:block th:unless="${manipedi.equals('manicure')}">
+    <th:block th:if="${manipedi.equals('pedicure')}">
         <h3 th:text="Pedicure"> </h3>
         <p th:replace="fragments :: pedicureDescription"></p>
     </th:block>
+    <th:block th:if="${manipedi.equals('both')}">
+        <h3 th:text="All"> </h3>
+        <p th:replace="fragments :: manicureDescription"></p>
+        <p th:replace="fragments :: pedicureDescription"></p>
+    </th:block>
 </div>
+<footer>
+    <div class="nailPolish" style="background-color: red"></div>
+    <div class="nailPolish" style="background-color: green"></div>
+    <div class="nailPolish" style="background-color: blue"></div>
+    <div class="nailPolish" style="background-color: yellow"></div>
+    <div class="nailPolish" style="background-color: aqua"></div>
+    <div class="nailPolish" style="background-color: black"></div>
+
+</footer>
 </body>
 </html>
